@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>freescholarship.com</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="logo">
+                <a href="index.html">
+                <img src="image/logo.png" alt="" width= 200px; ></a>
+            </div>
+            <nav>
+                <ul class="menuItems">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="">About us</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                    <li><a href="login.html">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    </div>
+
+
+    <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="image/login.png" alt="">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">Login</span>
+                            <span onclick="register()">Sign up</span>
+                            <span onclick="admin()">Admin</span>
+                            <hr id="Indicator">
+                        </div>
+                        <form id="LoginForm" action="login.php" method = "post">
+                            <input type="text" placeholder="Email" name="email" required>
+                            <input type="password" placeholder="Password" name="pass" required>
+                            <button type="submit" class="btn">Login</button>
+                        </form>
+                        <form id="RegForm" action="reg.php" method = "post" >
+                            <input type="text" placeholder="Username" name="username" required>
+                            <input type="email" placeholder="Email" name="email">
+                            <input type="password" placeholder="New Password" name="pass" required>
+                            <button type="submit" class="btn">Sign Up</button>
+                        </form>
+                        <form id="AdminForm" action="admin_page.php" method = "post">
+                            <input type="text" placeholder="Admin Email" name="email" required>
+                            <input type="password" placeholder="Admin Password" name="pass" required>
+                            <button type="submit" class="btn">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download our App</h3>
+                    <p>Download App for Andriod and ios mobile phone.</p>
+                    <div class="app-logo">
+                        <img src="image/play-store.png" alt="">
+                        <img src="image/app-store.png" alt="">
+                    </div>
+                </div>
+                <div class="footer-col-2">
+                    <h3>Free Scholarship</h3>
+                    <p>Our purpose is to give free education to all the Students without any partiality and keep the students happy.
+                    </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="">About us</a></li>
+                        <li><a href="contact.html">Contacts</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow Us</h3>
+                    <ul>
+                        <li><a href="https://www.facebook.com/profile.php?id=100011202365407" target="_blank">Facebook</a></li>
+                        <li><a href="index.html">Twitter</a></li>
+                        <li><a href="https://www.instagram.com/_x_siddharth_official_x_/" target="_blank">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <p class="copyright">Copyright &copy; 2020 - Siddharth Kanojiya</p>
+        </div>
+    </div>
+
+
+
+<script>
+    var LoginForm = document.getElementById("LoginForm");
+    var RegForm = document.getElementById("RegForm");
+    var AdminForm = document.getElementById("AdminForm");
+    var Indicator = document.getElementById("Indicator");
+
+    function register(){
+        RegForm.style.transform = "translateX(0px)";
+        LoginForm.style.transform = "translateX(0px)";
+        AdminForm.style.transform = "translateX(100px)";
+        Indicator.style.transform = "translateX(100px)";
+    }
+    function login(){
+        RegForm.style.transform = "translateX(-300px)";
+        LoginForm.style.transform = "translateX(320px)";
+        AdminForm.style.transform = "translateX(100px)";
+        Indicator.style.transform = "translateX(0px)";
+    }
+    function admin(){
+        AdminForm.style.transform = "translateX(-320px)";
+        LoginForm.style.transform = "translateX(0px)";
+        RegForm.style.transform = "translateX(400px)";
+        Indicator.style.transform = "translateX(210px)";
+    }
+
+
+</script>
+
+</body>
+
+</html>
